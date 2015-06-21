@@ -39,7 +39,7 @@ First of all you need a model that will represent an order in you application. I
         def __unicode__(self):
             return self.name
 
-    getpaid.register_to_payment(Order, unique=False, related_name='payments')
+    Payment = getpaid.register_to_payment(Order, unique=False, related_name='payments')
 
 
 The class name is not important at all. Important is that you register your model using the ``register_to_payment`` method.
